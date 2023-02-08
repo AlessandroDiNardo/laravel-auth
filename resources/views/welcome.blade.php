@@ -1,5 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main-layout')
 @section('content')
 
-<h1>SIUUUUUUUUUUU</h1>
 @endsection
