@@ -1,1 +1,3 @@
-<h1>NICE FOOTER</h1>
+<footer>
+    <h1>QUESTO E' UN BELLISSIMO FOOTER</h1>
+</footer>
