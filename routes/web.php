@@ -8,11 +8,11 @@ use App\Http\Controllers\MainController;
 Route::get('/', [MainController :: class, 'home']) -> name('home');
 
 Route::middleware(['auth', 'verified'])
-   ->name('logged.')
-   ->prefix('logged')
+   ->name('private.')
+   ->prefix('private')
    ->group(function () {
 
-    Route::get('/', [MainController :: class, 'logged']) -> name('logged');
+    Route::get('/', [MainController :: class, 'private']) -> name('private');
 });
 
 
