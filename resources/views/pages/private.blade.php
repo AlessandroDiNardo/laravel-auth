@@ -2,6 +2,6 @@
 
 @section('content')
     
-    <h1>LOGGATO AMMO</h1>
+    <h1>CURRICULUM FIGO SIUM</h1>
     
 @endsection
