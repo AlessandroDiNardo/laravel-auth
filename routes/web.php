@@ -12,7 +12,7 @@ Route::middleware(['auth', 'verified'])
    ->prefix('private')
    ->group(function () {
 
-    Route::get('/', [MainController :: class, 'private']) -> name('private');
+    Route::get('/', [MainController :: class, 'private']);
 });
 
 
