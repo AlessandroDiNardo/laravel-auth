@@ -2,18 +2,26 @@
 
 @section('content')
     
-    <h1>CONTENT</h1>
-    <div class="card-body">
+    <div class="ms_container">
         <h1>I miei progetti</h1>
-        <ul>
+        <ul class="ms_card_container">
             @foreach ($projects as $project)
 
-                <li>{{$project -> name}}</li>
-                <li>{{$project -> description}}</li>
-                <li>{{$project -> main_image}}</li>
-                <li>{{$project -> release_date}}</li>
-                <li>{{$project -> repo_link}}</li>
-                
+                <li class="card">
+                    <img src="{{$project -> main_image}}" alt="">
+                    <h3>
+                        {{$project -> name}}
+                    </h3>
+                    <p>
+                            {{$project -> description}}
+                    </p>
+                    <div>
+                        {{$project -> release_date}}
+                    </div>
+                    <a href="#">
+                        {{$project -> repo_link}}
+                    </a>
+                </li>
             @endforeach
         </ul>
     </div>
