@@ -1,6 +1,4 @@
 <div id="app">
-
-
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <div class="navbar-brand d-flex align-items-center"></div>
@@ -12,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
+                    <li class="nav-item d-flex">
                         <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                         <a class="nav-link" href="{{url('/private') }}">logged</a>
                     </li>
