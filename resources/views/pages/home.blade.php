@@ -8,18 +8,20 @@
             @foreach ($projects as $project)
 
                 <li class="card">
+                    <a href="{{ route('pages.project.show', $project) }}">
                     <img src="{{$project -> main_image}}" alt="">
-                    <h3>
-                        {{$project -> name}}
-                    </h3>
-                    <p>
+                        <h3>
+                            {{$project -> name}}
+                        </h3>
+                        <p>
                             {{$project -> description}}
-                    </p>
-                    <div>
-                        {{$project -> release_date}}
-                    </div>
-                    <a href="#">
-                        {{$project -> repo_link}}
+                        </p>
+                        <div>
+                            {{$project -> release_date}}
+                        </div>
+                        <a href="#">
+                            {{$project -> repo_link}}
+                        </a>
                     </a>
                 </li>
             @endforeach
