@@ -17,7 +17,7 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->words(3, true),
+            'name' => fake()->words(rand(1, 5), true),
             'description' => fake()->paragraph(),
             'main_image' => fake()->imageUrl(360, 360, 'animals', true),
             'release_date' => fake()->dateTimeInInterval('-6months', '+6months'),
