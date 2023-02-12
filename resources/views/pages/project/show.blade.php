@@ -22,11 +22,19 @@
         </h5>
 
         <h6>
-            follow the link to find out more:
+
+            Github:
             <a href="">
                 {{ $project -> repo_link}}
             </a>
+
         </h6>
+        <hr>
+        
+        @auth 
+        <a href="#">Edit</a> - <a href="#">Delete</a>
+        @endauth
+
     </section>
     
 @endsection

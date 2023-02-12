@@ -43,6 +43,13 @@ class MainController extends Controller
 
         $project = Project::create($data);
 
-        return redirect() -> route('project.show', $projcet);
+        return redirect() -> route('pages.project.show', $projcet);
+    }
+
+    public function delete(Project $project) {
+        
+        $project -> delete();
+
+        return redirect() -> route('home', $project);
     }
 }
