@@ -26,5 +26,8 @@ class MainController extends Controller
         return view('pages.project.show', compact('project'));
     }
 
-   
+    public function  create() {
+        
+        return view('pages.project.private');
+    }
 }
