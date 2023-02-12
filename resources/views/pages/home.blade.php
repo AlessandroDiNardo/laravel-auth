@@ -5,6 +5,7 @@
     <div class="ms_container">
         <h1>I miei progetti</h1>
         <ul class="ms_card_container">
+        <a href="{{ route('private.project.create', $projects) }}">CREATE</a>
             @foreach ($projects as $project)
                 <li class="card">
                     <a href="{{ route('pages.project.show', $project) }}">

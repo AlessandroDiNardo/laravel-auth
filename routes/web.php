@@ -14,7 +14,9 @@ Route::middleware([])
    ->prefix('private')
    ->group(function () {
 
-    Route::get('/project/create{project}', [MainController :: class, 'create']) -> name('pages.project.create');;
+    Route::get('/project/create', [MainController :: class, 'create']) -> name('pages.project.create');
+    Route::get('/project/store', [MainController :: class, 'store']) -> name('pages.project.store');
+    
     Route::get('/', [MainController :: class, 'private']);
 });
 

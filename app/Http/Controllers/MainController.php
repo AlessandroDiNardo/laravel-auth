@@ -28,6 +28,21 @@ class MainController extends Controller
 
     public function  create() {
         
-        return view('pages.project.private');
+        return view('pages.project.create');
+    }
+
+    public function store(Request $request) {
+
+        $data = $request->validate([
+            'name' => 'required|string|max:64|unique:projects,name',
+            'description' => 'nullable|string',
+            'main_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'release_date' => 'required|before:'.now(),
+            'repo_link' => 'required|unique:projects,repo_link'
+        ]);
+
+        $project = Project::create($data);
+
+        return redirect() -> route('project.show', $projcet);
     }
 }

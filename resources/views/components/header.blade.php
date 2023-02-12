@@ -12,7 +12,7 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item d-flex">
                         <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
-                        <!-- <a class="nav-link" href="{{url('/private') }}">logged</a> -->
+                        <a class="nav-link" href="{{url('/private') }}"></a>
                     </li>
                 </ul>
 
