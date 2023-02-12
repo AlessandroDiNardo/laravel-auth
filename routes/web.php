@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController :: class, 'home']) -> name('home');
-Route::get('/project/show', [MainController :: class, 'show']) -> name('pages.project.show');
+Route::get('/project/show{project}', [MainController :: class, 'show']) -> name('pages.project.show');
 
-Route::middleware(['auth', 'verified'])
+// Route::middleware(['auth', 'verified'])
+Route::middleware([])
    ->name('private.')
    ->prefix('private')
    ->group(function () {

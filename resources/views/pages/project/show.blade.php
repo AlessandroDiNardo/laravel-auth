@@ -2,11 +2,11 @@
 
 @section('content')
 
-    <section class="diagonal">
+    <section class="ms_container_show">
 
-        <h1>DISCOVER PROJECT</h1>
+        <h1>{{ $project -> name }}</h1>
 
-        <h3>{{ $project -> name }}</h3>
+        <img src="{{$project -> main_image}}" alt="">
 
         <p>
             {{ 
