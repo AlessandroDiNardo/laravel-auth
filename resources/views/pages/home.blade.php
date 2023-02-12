@@ -8,7 +8,7 @@
             @foreach ($projects as $project)
                 <li class="card">
                     <a href="{{ route('pages.project.show', $project) }}">
-                        <img src="{{$project -> main_image}}" alt="">
+                        <img src="{{ asset('/storage/rs660.jpg') }} " alt="">
                     </a>
                 </li>
             @endforeach
