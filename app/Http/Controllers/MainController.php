@@ -43,7 +43,7 @@ class MainController extends Controller
 
         $project = Project::create($data);
 
-        return redirect() -> route('pages.project.show', $projcet);
+        return redirect() -> route('pages.project.show', $project);
     }
 
     public function delete(Project $project) {
@@ -51,5 +51,21 @@ class MainController extends Controller
         $project -> delete();
 
         return redirect() -> route('home', $project);
+    }
+
+
+    public function update(Request $request) {
+
+        $data = $request->validate([
+            'name' => 'required|string|max:64|unique:projects,name',
+            'description' => 'nullable|string',
+            'main_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'release_date' => 'required|before:'.now(),
+            'repo_link' => 'required|unique:projects,repo_link'
+        ]);
+
+        $project = Project::create($data);
+
+        return redirect() -> route('pages.project.show', $project);
     }
 }
